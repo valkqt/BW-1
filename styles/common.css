@@ -1,0 +1,28 @@
+/*body{
+    background-image: url(../assets/bg.jpg);
+    border: ;
+}
+
+.logo{
+    width: 150px;
+    height: auto;
+    padding-left: 50px;
+}*/
+
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url("../assets/bg.jpg");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header img{
+    width: 7rem;
+    padding-left: 6rem;
+    padding-top: 2rem;
+}
