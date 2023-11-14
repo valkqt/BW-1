@@ -36,3 +36,18 @@ p.dimensionP{
     font-size: 18px;
 }
 
+button.bottoneIlluminato {
+    background-color:  #00FFFF;
+    font-weight: bold;
+    width: 15%;
+    padding: 20px;
+    margin-left: 8.5%;
+    font-size: 25px;
+    font-family: Outfit;
+    border: 1px;
+    
+}
+button.bottoneIlluminato:hover {
+    box-shadow: #00FFFF 0px -25px 5px -40px inset,#00FFFF 0 1px 25px,#00FFFF 0 1px 1px,#00FFFF 0 1px 1px,#00FFFF 0 1px 1px,#00FFFF 0 1px 1px;
+  } 
+
