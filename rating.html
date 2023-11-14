@@ -19,18 +19,25 @@
         <p class="dimensionP">From 0 to 10, how likely are you recommend EPICODE to a friend or a colleague? </p>
         </div>
 
-        <div class="stelle">
-                <image class="stella" src="assets/star.svg" />
-                <image class="stellaScura" src="assets/darkStar.svg"/>
-        </div>
+       
+        <div class="rating" id="rating">
+            <img src="assets/star.svg" alt="coloredStar" id="coloredStar">
+            <img src="assets/darkStar.svg" alt="Star" class="star" data-value="5"> 
+            <img src="assets/darkStar.svg" alt="Star" class="star" data-value="4">
+            <img src="assets/darkStar.svg" alt="Star" class="star" data-value="3">
+            <img src="assets/darkStar.svg" alt="Star" class="star" data-value="2">
+            <img src="assets/darkStar.svg" alt="Star" class="star" data-value="1">
+          </div>
+          
 
         <p class="dimensionP">Leave us an open feedback about your experience so far </p> 
+        
         <form class="formContenitore" action="">
           <input class="commentRate" type="text" value="Write your comment here">
         </form>
        
-        <button> submit </button>
+        <button classe="bottoneIlluminato"> submit </button>
     </main>
-    
+    <script src="scripts/star.js"></script>
 </body>
 </html>
