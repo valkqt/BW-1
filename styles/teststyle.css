@@ -8,6 +8,15 @@
       margin-left: 90rem;
     }
 
+    .testo-cerchio {
+        transform: rotate(90deg);
+        transform-origin: center;
+        white-space: nowrap;
+        text-anchor: middle;
+        font-size: 4rem;
+        fill: whitesmoke;
+    }
+
     .cerchio {
       transform: rotate(-90deg);
     }
