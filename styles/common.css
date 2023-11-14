@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Outfit:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body, html {
     height: 100%;
 }
+
 body{
     background-image: url("../assets/bg.jpg");
     height: 100%;
@@ -10,7 +12,10 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
+    font-family: Outfit;
+    font-weight: bold;   
 }
+
 header img{
     width: 7rem;
     height: auto;
@@ -22,14 +27,12 @@ body span{
     font-weight: normal;
 }
 
-main{
-    text-align: center;
+body p, li, a{
+    font-family: Inter;
 }
 
-main h1{
-    font-family: Outfit;
-    font-weight: bold;   
-    font-size: 30px;
+main{
+    text-align: center;
 }
 
 p.dimensionP{

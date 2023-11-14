@@ -1,7 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Outfit:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 main h1{
     font-size: 2rem;
-    padding-top: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
 }
 
+div.risposte{
+    display: inline-block;
+    width: 60rem;
+    margin: 0 auto;
+}
 
+button {
+  display: inline-block;
+  margin-bottom: 10px;  
+  background-color: rgb(46, 42, 89, 0.3);  
+  border-style: solid 9px;
+  box-shadow: whitesmoke -1px -1px 1px 1px;
+  border-color: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 350px;
+  height: 60px;
+  margin: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  font-size: 14px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
+button a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+  background-color: #C2008E;
+}
+
+p {
+    padding-top: 6rem;
+    letter-spacing: 0.15em;
+}
+
+p>span {
+    color: #C2008E;
+}
