@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/teststyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
     <header>
         <img src="assets/epicode_logo.png" alt="Logo Epicode" srcset="">
     </header>
     <main>
-        <div id="Secondi"></div> 
+        <div class="barra-circolare">
+            <svg class="cerchio">
+              <circle class="sfondo" cx="50%" cy="50%" r="70"></circle>
+              <circle class="riempimento" cx="50%" cy="50%" r="70" stroke="#3498db" stroke-width="10" fill="transparent"></circle>
+              <text class="testo-cerchio" x="50%" y="50%" dy="0.3em">60</text>
+            </svg>
+        </div>         
         <h1><span>How can I create a </span><br>checkbox in HTML?</h1>
         <div class="risposte">
                 <button type="submit" title="Risposta 1"><a href="http://#">&lt;input type = "check"&gt;</a></button>
@@ -23,5 +30,6 @@
         </div>
         <p>QUESTION 1<span>/10</span></p>
     </main>
+    <script src="scripts/testTimer.js"></script>
 </body>
 </html>
