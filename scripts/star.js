@@ -8,7 +8,7 @@ function highlightStar(starNumber) {
 }
 
 function resetStars() {
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 10; i++) {
     const star = document.querySelector(`.star:nth-child(${i})`);
     if (i > punteggioAttuale) {
       star.src = "assets/darkStar.svg";
