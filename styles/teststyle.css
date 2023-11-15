@@ -2,36 +2,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .barra-circolare {
-      width: 150px;
-      height: 150px;
-      position: relative;
-      margin-left: 90rem;
-    }
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-left: 90rem;
+    text-align: center;
+}
 
-    .testo-cerchio {
-        transform: rotate(90deg);
-        transform-origin: center;
-        white-space: nowrap;
-        text-anchor: middle;
-        font-size: 4rem;
-        fill: whitesmoke;
-    }
+.label{
+    font-size: small;
+    text-transform: uppercase;
+}
 
-    .cerchio {
-      transform: rotate(-90deg);
-    }
+.testo-cerchio {
+    transform: rotate(90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    text-anchor: middle;
+    font-size: 4rem;
+    fill: whitesmoke;
+}
 
-    .riempimento {
-      stroke-dasharray: 440;
-      stroke-dashoffset: 440;
-      transition: stroke-dashoffset 60s ease;
-    }
+.cerchio {
+    transform: rotate(-90deg);
+}
 
-    .sfondo {
-      stroke: rgb(0, 255, 255); /* Colore dello sfondo */
-      stroke-width: 10;
-      fill: transparent;
-    }
+.riempimento {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 60s linear;
+}
+
+.sfondo {
+    stroke: rgb(0, 255, 255);
+    stroke-width: 10;
+    fill: transparent;
+}
 
 main h1{
     font-size: 3.5rem;
