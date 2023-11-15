@@ -1,64 +1,28 @@
-let isMouseOutEnabled = true;
+let punteggioAttuale = 0;
 
-function mouseOver() {
-    let selezioneStella = document.querySelectorAll(".star");
-
-    for (let i = 0; i < selezioneStella.length; i++) {
-        selezioneStella[i].addEventListener("mouseover", () => {
-            selezioneStella[i].setAttribute("src", "assets/star.svg");
-
-            for (let j = 0; j < i; j++) {
-                selezioneStella[j].setAttribute("src", "assets/star.svg");
-            }
-        });
-    }
-
-    let rate = 0;
-
-    for (let i = 0; i < selezioneStella.length; i++) {
-        selezioneStella[i].addEventListener("click", () => {
-            rate = i;
-            
-        });
-    }
-
-    return rate; 
+function highlightStar(starNumber) {
+  for (let i = 1; i <= starNumber; i++) {
+    const star = document.querySelector(`.star:nth-child(${i})`);
+    star.src = "assets/star.svg";
+  }
 }
 
-function mouseOut() {
-    if (!isMouseOutEnabled) return;
-
-    let selezioneStella = document.querySelectorAll(".star");
-
-    for (let i = 0; i < selezioneStella.length; i++) {
-        selezioneStella[i].addEventListener("mouseout", () => {
-            selezioneStella[i].setAttribute("src", "assets/darkStar.svg");
-
-            for (let j = 0; j < i; j++) {
-                selezioneStella[j].setAttribute("src", "assets/darkStar.svg");
-            }
-        });
+function resetStars() {
+  for (let i = 1; i <= 5; i++) {
+    const star = document.querySelector(`.star:nth-child(${i})`);
+    if (i > punteggioAttuale) {
+      star.src = "assets/darkStar.svg";
+    } else {
+      star.src = "assets/star.svg";
     }
+  }
 }
 
-function clickStill() {
-    let selezioneStella = document.querySelectorAll(".star");
+  
 
-    for (let i = 0; i < selezioneStella.length; i++) {
-        selezioneStella[i].addEventListener("click", () => {
-            selezioneStella[i].setAttribute("src", "assets/star.svg");
+function rateStar(punteggio) {
+  punteggioAttuale = punteggio;
+ 
 
-            for (let j = 0; j < i; j++) {
-                selezioneStella[j].setAttribute("src", "assets/star.svg");
-            }
-        });
-    }
+  resetStars();
 }
-
-// Disable mouseOut functionality
-isMouseOutEnabled = false;
-
-// Call the functions
-mouseOver();
-mouseOut();
-clickStill();
