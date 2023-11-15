@@ -1,0 +1,111 @@
+.dimensioniP{
+    margin-bottom: 20px;
+}
+.contenitore{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.circlebar {
+    width: 400px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: inherit;
+}
+  .barrapiena {
+    stroke:#00FFFF;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 1.5s ease;
+  }
+  .circlesfondo {
+    stroke: #C2128D; 
+    stroke-width: 25;
+    fill: transparent;
+  }
+  .centrocerchio{
+    padding-top: 75px;
+  }
+  .centrocerchio h3{
+    font-weight: bold;
+  }
+  .centrocerchio span{
+    color: #00FFFF;
+    font: bold;
+    padding-top: 25px;
+  }
+  .centrocerchio p{
+    font-size: x-small;
+    padding-top: 70px;
+  }
+  .percentuale {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8px;
+    color: whitesmoke;
+  }
+  .cicrleText {
+    fill: whitesmoke;
+  }
+  .mail{
+    font-size: 0.8rem;
+    fill: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .centrocerchio{
+    padding: 25px;
+    padding-top: 40px;
+  }
+.correct{
+  font-size: 30px;
+  padding-top: 70px;
+  line-height: 0.8rem;
+}
+.correct p:first{
+  padding-bottom: 0px;
+}
+.correct p:last-child{
+  font-size: 15px;
+  font-weight: bold;
+}
+.correctpercent{
+  padding: 0px;
+  margin: 0px;
+}
+.wrongpercent{
+  padding: 0px;
+  margin: 0px;
+}
+.wrong{
+  font-size: 30px;
+  padding-top: 70px;
+  line-height: 0.8rem;
+}
+
+.wrong p:last-child{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+form{
+    padding-top: 40px;
+}
+.RateUs{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    width: 150px; 
+    height: 50px; 
+    outline: none; 
+    margin-bottom: -5px; 
+    font: bold;
+    color: whitesmoke;
+    font-size: 15px;
+}
