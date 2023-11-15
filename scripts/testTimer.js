@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const countdownText = document.querySelector('.testo-cerchio .countdown');
+    const label = document.querySelector('.testo-cerchio .label');
+
+    const startTimer = (durationSeconds) => {
+        let secondsRemaining = durationSeconds;
+
+        
+        const updateTimer = () => {
+            if (secondsRemaining >= 0) {
+                countdownText.textContent = secondsRemaining;
+                label.textContent = 'secondi';
+
+            secondsRemaining--;
+            } else {
+            clearInterval(timerInterval);
+        }
+        }
+        updateTimer();
+        const timerInterval = setInterval(updateTimer, 1000);
+    }
+    startTimer(60);
+});
+
 function riempiBarra(percentuale) {
     const riempimento = document.querySelector('.riempimento');
     const percentualeElemento = document.querySelector('.percentuale');
@@ -10,24 +34,4 @@ function riempiBarra(percentuale) {
   }
   riempiBarra(100);
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const testoCerchio = document.getElementsByClassName("testo-cerchio");
-
-    const startTimer = (durationSeconds) => {
-        let secondsRemaining = durationSeconds;
-
-        const tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-        testoCerchio.appendChild(tspan);
-
-        const updateTimer = () => {
-            const minutes = Math.floor(secondsRemaining / 60);
-            const seconds = secondsRemaining % 60;
-            tspan.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-            secondsRemaining--;
-        }
-        updateTimer();
-        const timerInterval = setInterval(updateTimer, 1000);
-    }
-    startTimer(60);
-});
+  
