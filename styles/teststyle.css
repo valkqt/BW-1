@@ -53,6 +53,7 @@ div.risposte{
 
 button {
   display: inline-block;
+  color:white;
   margin-bottom: 10px;  
   background-color: rgb(46, 42, 89, 0.3);  
   border-style: solid 9px;
