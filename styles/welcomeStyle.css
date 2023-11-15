@@ -29,7 +29,8 @@ h2 + p {
 
 ul {
     padding-left: 1.5rem;
-    line-height: 1.5
+    line-height: 1.8;
+    
 }
 
 ul span {
@@ -40,7 +41,7 @@ form {
     padding-left: 6rem;
     padding-top: 6rem;
     font-weight: bold;
-    font-family: Outfit;
+    font-family: Inter;
     font-size: 15px;
 }
 
