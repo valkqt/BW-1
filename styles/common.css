@@ -39,7 +39,7 @@ p.dimensionP{
     font-size: 18px;
 }
 
-button.bottoneIlluminato {
+.bottoneIlluminato {
     background-color:  #00FFFF;
     font-weight: bold;
     width: 15%;
