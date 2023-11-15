@@ -1,0 +1,74 @@
+main {
+    text-align: left;
+    padding-left: 6rem;
+    font-family: Outfit;
+    color: rgb(235, 231, 238);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+main h1 {
+    font-size: 80px;
+    padding-top: 6rem;
+    font-weight: bold;
+    
+}
+
+h2 {
+    color: rgb(188, 18, 138);
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 0.7rem;
+}
+
+h2 + p {
+    padding-bottom: 3rem;
+    line-height: 1.1
+}
+
+ul {
+    padding-left: 1.5rem;
+    line-height: 1.5
+}
+
+ul span {
+    font-weight: bold;
+}
+
+form {
+    padding-left: 6rem;
+    padding-top: 6rem;
+    font-weight: bold;
+    font-family: Outfit;
+    font-size: 15px;
+}
+
+label{
+    margin-left: 0.5%;
+}
+.transparent-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    width: 20px; /* Larghezza della checkbox */
+    height: 20px; /* Altezza della checkbox */
+    outline: none; 
+    margin-bottom: -5px; 
+}
+
+.transparent-checkbox:checked {
+    background:url(/assets/checkbox.png)  center no-repeat;
+    font-size: small;
+    
+    /* mette il verificato quando la checkbox è selezionata */
+  }
+
+
+
+
+  
+
+    

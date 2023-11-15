@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/welcomeStyle.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/welcomeStyle.css">
 </head>
 <body>
     <header>
@@ -13,12 +15,12 @@
 
     <main>
         <h1>
-            Welcome to <br> 
-            <span>your exam</span>
+            <span>Welcome to</span> <br> 
+            your exam
         </h1>
 
         <h2>Instructions</h2>
-        <p>We don't expect most engineers to know the answers to all of these questions, 
+        <p>We don't expect most engineers to know the answers to all of these<br> questions, 
             so don't worry if you're unsure of a few of them.
         </p>
 
@@ -35,12 +37,14 @@
         </ul>
     </main>
 
-    <form action="">
-        <input type="checkbox" id="" name="" value="">
-        <label for="">I promise to answer myself without help from anyone</label>
+    <form action="/test.html">
+        <input type="checkbox" class="transparent-checkbox" id="myCheckbox" required>
+        <label for="myCheckbox">I promise to answer myself without help from anyone</label>
 
-        <button>PROCEED</button>
+        <button type="submit" class="bottoneIlluminato">PROCEED</button>
     </form>
+
+       
 
 </body>
 </html>

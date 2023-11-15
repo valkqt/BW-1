@@ -1,7 +1,89 @@
-main h1{
-    font-size: 2rem;
-    padding-top: 5rem;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Outfit:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.barra-circolare {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-left: 90rem;
+    text-align: center;
 }
 
+.label{
+    font-size: small;
+    text-transform: uppercase;
+}
 
+.testo-cerchio {
+    transform: rotate(90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    text-anchor: middle;
+    font-size: 4rem;
+    fill: whitesmoke;
+}
 
+.cerchio {
+    transform: rotate(-90deg);
+}
+
+.riempimento {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 60s linear;
+}
+
+.sfondo {
+    stroke: rgb(0, 255, 255);
+    stroke-width: 10;
+    fill: transparent;
+}
+
+main h1{
+    font-size: 3.5rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+div.risposte{
+    display: inline-block;
+    width: 60rem;
+    margin: 0 auto;
+}
+
+button {
+  display: inline-block;
+  color:white;
+  margin-bottom: 10px;  
+  background-color: rgb(46, 42, 89, 0.3);  
+  border-style: solid;
+  box-shadow: whitesmoke -1px -1px 1px 1px;
+  border-color: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 380px;
+  height: 70px;
+  margin: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #C2008E;
+}
+
+p {
+    padding-top: 10rem;
+    letter-spacing: 0.15em;
+}
+
+p>span {
+    color: #C2008E;
+}

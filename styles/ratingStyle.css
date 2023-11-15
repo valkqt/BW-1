@@ -1,0 +1,38 @@
+h2 {
+    font-size:60px;
+    margin-bottom: 1%;
+    
+}
+
+div:first-child {
+    margin-top: 10%;    
+}
+
+.stelle{
+   
+    margin-bottom: 1%;
+}
+
+.formContenitore {
+    margin-top: 5%;
+    padding-right: 20%;
+}
+.rating {
+    margin-top: 2%;
+}
+
+.commentRate {
+    color: grey;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 5%;   
+}
+
+.dimensionP{
+    margin-top: 5%;
+}
+
+
+.bottoneIlluminato {
+    margin-left: 2.5%;
+}
