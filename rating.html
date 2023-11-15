@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="star.css">
+    <link rel="stylesheet" href="styles/ratingStyle.css">
     <title>Rate</title>
 </head>
 <body>
@@ -14,19 +14,29 @@
         
     </header>
     <main>
-        <h2>Tell us how it's going</h2>
-        <p>From 0 to 10, how likely are you recommend EPICODE to a friend or a colleague? </p>
         <div>
-                <image class="stella" src="assets/star.svg" />
-                <image class="stellaScura" src="assets/darkStar.svg"/>
+        <h2>Tell us how it's going</h2>
+        <p class="dimensionP">From 0 to 10, how likely are you recommend EPICODE to a friend or a colleague? </p>
         </div>
-        <p>Leave us an open feedback about your experience so far </p> 
-        <form action="">
-          <input type="text" value="Write your comment here">
+
+       
+        <div class="rating" id="rating">
+            <img class="star" src="assets/darkStar.svg" onclick="rateStar(1)" onmouseover="highlightStar(1)" onmouseout="resetStars()" value="1">
+            <img class="star" src="assets/darkStar.svg" onclick="rateStar(2)" onmouseover="highlightStar(2)" onmouseout="resetStars()" value="2">
+            <img class="star" src="assets/darkStar.svg" onclick="rateStar(3)" onmouseover="highlightStar(3)" onmouseout="resetStars()" value="3">
+            <img class="star" src="assets/darkStar.svg" onclick="rateStar(4)" onmouseover="highlightStar(4)" onmouseout="resetStars()" value="4">
+            <img class="star" src="assets/darkStar.svg" onclick="rateStar(5)" onmouseover="highlightStar(5)" onmouseout="resetStars()" value="5">
+          </div>
+          
+
+        <p class="dimensionP">Leave us an open feedback about your experience so far </p> 
+        
+        <form class="formContenitore" >
+          <input class="commentRate" type="text" value="Write your comment here">
         </form>
        
-        <button> conferma </button>
+        <button classe="bottoneIlluminato"> submit </button>
     </main>
-    
+    <script src="scripts/star.js"></script>
 </body>
 </html>
