@@ -5,23 +5,34 @@ h2 {
 }
 
 div:first-child {
-    margin-top: 15%;    
+    margin-top: 10%;    
 }
 
 .stelle{
-    margin-top: 2%;
-    margin-bottom: 5%;
+   
+    margin-bottom: 1%;
 }
 
 .formContenitore {
     margin-top: 5%;
-    padding-right: 16%;
+    padding-right: 20%;
+}
+.rating {
+    margin-top: 2%;
 }
 
 .commentRate {
     color: grey;
     background-color: transparent;
     border: none;
-    margin-bottom: 5%;
-    
+    margin-bottom: 5%;   
+}
+
+.dimensionP{
+    margin-top: 5%;
+}
+
+
+.bottoneIlluminato {
+    margin-left: 2.5%;
 }
