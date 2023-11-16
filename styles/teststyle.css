@@ -26,11 +26,33 @@
 .cerchio {
     transform: rotate(-90deg);
 }
+/* .pepe {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+
+    transition: stroke-dashoffset 3s linear;
+
+
+} */
+ 
+@keyframes pepe {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 440;
+    }
+}
 
 .riempimento {
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    transition: stroke-dashoffset 60s linear;
+    animation-duration: 3s;
+    animation-name: pepe;
+    animation-iteration-count: infinite;
+    animation-direction: reverse
+
+
 }
 
 .sfondo {

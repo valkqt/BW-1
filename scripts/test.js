@@ -15,7 +15,7 @@ const questions = [
     db_name: "question2",
     title: "Qual è il risultato del codice di seguito, in console?",
     answer1: { text: "undefined", correct: true },
-    answer2: { text: "[25, 20]", correct: false },    
+    answer2: { text: "[25, 20]", correct: false },
     answer3: { text: "25", correct: false },
     answer4: { text: "30", correct: false },
   },
@@ -79,44 +79,43 @@ function timerPepe() {
   const startTimer = (durationSeconds) => {
     let secondsRemaining = durationSeconds;
 
-    const updateTimer = () => {      
-
+    const updateTimer = () => {
       if (secondsRemaining === 0) {
-
-
-
         let currentQuestion = document.querySelector("main h1");
-        counter++
+        counter++;
 
-        countQuestions()
-
+        countQuestions();
 
         for (question of questions) {
           if (currentQuestion.innerHTML === question.title) {
             let questionID = question.db_name;
             sessionStorage.setItem(questionID, "wrong");
             changeQuestions();
-            break
-            
+            break;
           }
         }
-        secondsRemaining = durationSeconds
+        secondsRemaining = durationSeconds;
         countdownText.textContent = secondsRemaining;
+        // riempiBarra(100);
+
 
       }
       if (secondsRemaining >= 0) {
         countdownText.textContent = secondsRemaining;
 
-
         label.textContent = "secondi";
 
+
         secondsRemaining--;
-      } 
+      }
     };
     updateTimer();
     timer = setInterval(updateTimer, 1000);
   };
   startTimer(3);
+
+  // riempiBarra(100);
+
 }
 
 function changeQuestions() {
@@ -127,20 +126,16 @@ function changeQuestions() {
 
   let currentQuestion = document.querySelector("main h1");
   let buttons = document.querySelectorAll("button");
-  console.log(currentQuestion.innerHTML)
-
 
   let picked = chosenQuestions[0];
   currentQuestion.innerHTML = picked.title;
 
   chosenQuestions.splice(0, 1);
 
-
   for (let i = 0; i <= 3; i++) {
     let button = buttons[i];
     button.innerText = picked[`answer${i + 1}`].text;
     let text = button.innerText;
-
 
     button.addEventListener("click", (e) => {
       for (let question of questions) {
@@ -151,19 +146,15 @@ function changeQuestions() {
                 window.sessionStorage.setItem(question.db_name, "correct");
                 counter++;
                 countQuestions();
-      
 
                 const newBtn = e.target.cloneNode(true);
                 e.target.replaceWith(newBtn);
                 changeQuestions();
-
               } else {
-
                 window.sessionStorage.setItem(question.db_name, "wrong");
                 counter++;
 
                 countQuestions();
-
 
                 const newBtn = e.target.cloneNode(true);
                 e.target.replaceWith(newBtn);
@@ -173,9 +164,12 @@ function changeQuestions() {
           }
         }
       }
-      clearInterval(timer)
-      timerPepe()
+      const riempimento = document.querySelector(".riempimento");
+      const pepe = riempimento.cloneNode(true)
+      riempimento.replaceWith(pepe)
 
+      clearInterval(timer);
+      timerPepe();
     });
   }
 }
@@ -185,9 +179,20 @@ function countQuestions() {
   counterElement.innerHTML = `QUESTION ${counter + 1}<span>/10</span>`;
 }
 
+// function riempiBarra(percentuale) {
+
+//   const riempimento = document.querySelector(".riempimento");
+
+//   const circonferenza = riempimento.getTotalLength();
+//   const lunghezzaRiempimento = circonferenza * (1 - percentuale / 100);
+
+//   riempimento.style.strokeDashoffset = lunghezzaRiempimento;
+// }
+
+
 
 randomizeQuestions(3);
 changeQuestions();
-timerPepe()
+timerPepe();
 
 sessionStorage.clear();
