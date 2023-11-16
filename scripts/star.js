@@ -33,7 +33,7 @@ function generaCommento() {
  const contenitoreRecensione = document.createElement("div")
  const immagineProfilo = document.createElement("img")
  immagineProfilo.classList.add("immagineProfilo")
- immagineProfilo.src = "assets/anonymous_avatars_grey_circles.jpg"
+ immagineProfilo.src = "assets/daniele-buscioni.jpg"
  spazioStelle.classList.add("divRecensione")
  
  prendiRecensione.appendChild(immagineProfilo)
