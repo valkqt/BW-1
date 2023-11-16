@@ -20,8 +20,43 @@ function postResults() {
   wrongResult[1].innerText = `${((wrongArray.length / answers.length) * 100).toFixed(1)}%`;
   wrongResult[2].innerText = `${wrongArray.length} / ${answers.length} questions`
 
+  const percentuale = ((correctArray.length / answers.length) * 100).toFixed(1)
+
+  const riempimento = document.querySelector('.barrapiena');
+  const percentualeElemento = document.querySelector('.correctpercent');
+
+  const circonferenza = riempimento.getTotalLength();
+  const lunghezzaRiempimento = circonferenza * (1 - percentuale / 100);
+
+  riempimento.style.strokeDasharray = circonferenza;
+  riempimento.style.strokeDashoffset = lunghezzaRiempimento;
+  percentualeElemento.textContent = percentuale + '%';
+  if (percentuale === 100) {
+  riempimento.style.strokeDashoffset = 0;
+  }
+
+
 
 }
+
+function riempiBarra(percentuale) {
+  const riempimento = document.querySelector('.barrapiena');
+  const percentualeElemento = document.querySelector('.correctpercent');
+
+  const circonferenza = riempimento.getTotalLength();
+  const lunghezzaRiempimento = circonferenza * (1 - percentuale / 100);
+
+  riempimento.style.strokeDasharray = circonferenza;
+  riempimento.style.strokeDashoffset = lunghezzaRiempimento;
+  percentualeElemento.textContent = percentuale + '%';
+  if (percentuale === 100) {
+  riempimento.style.strokeDashoffset = 0;
+  }
+}
+
+
+const rateButton = document.querySelector('.rateUs')
+rateButton.addEventListener('click', () => window.location.assign("/rating.html"));
 
 parseStorage();
 postResults()

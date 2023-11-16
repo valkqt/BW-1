@@ -15,7 +15,7 @@ const questions = [
     db_name: "question2",
     title: "Qual è il risultato del codice di seguito, in console?",
     answer1: { text: "undefined", correct: true },
-    answer2: { text: "[25, 20]", correct: false },
+    answer2: { text: "[25, 20]", correct: false },    
     answer3: { text: "25", correct: false },
     answer4: { text: "30", correct: false },
   },
@@ -82,24 +82,30 @@ function timerPepe() {
     const updateTimer = () => {      
 
       if (secondsRemaining === 0) {
-        
-        countdownText.textContent = secondsRemaining;
-        secondsRemaining = durationSeconds
+
+
 
         let currentQuestion = document.querySelector("main h1");
+        counter++
 
-        for (i of questions) {
-          if (currentQuestion.innerHTML === i.title) {
-            let questionID = i.db_name;
+        countQuestions()
+
+
+        for (question of questions) {
+          if (currentQuestion.innerHTML === question.title) {
+            let questionID = question.db_name;
             sessionStorage.setItem(questionID, "wrong");
             changeQuestions();
-            return
+            break
+            
           }
         }
-      }
-      if (secondsRemaining > 0) {
+        secondsRemaining = durationSeconds
         countdownText.textContent = secondsRemaining;
-        console.log(secondsRemaining)
+
+      }
+      if (secondsRemaining >= 0) {
+        countdownText.textContent = secondsRemaining;
 
 
         label.textContent = "secondi";
@@ -122,8 +128,6 @@ function changeQuestions() {
   let currentQuestion = document.querySelector("main h1");
   let buttons = document.querySelectorAll("button");
   console.log(currentQuestion.innerHTML)
-  // timerPepe()
-
 
 
   let picked = chosenQuestions[0];
@@ -147,17 +151,19 @@ function changeQuestions() {
                 window.sessionStorage.setItem(question.db_name, "correct");
                 counter++;
                 countQuestions();
-
+      
 
                 const newBtn = e.target.cloneNode(true);
                 e.target.replaceWith(newBtn);
                 changeQuestions();
 
               } else {
+
                 window.sessionStorage.setItem(question.db_name, "wrong");
                 counter++;
 
                 countQuestions();
+
 
                 const newBtn = e.target.cloneNode(true);
                 e.target.replaceWith(newBtn);
@@ -167,6 +173,9 @@ function changeQuestions() {
           }
         }
       }
+      clearInterval(timer)
+      timerPepe()
+
     });
   }
 }
@@ -176,7 +185,6 @@ function countQuestions() {
   counterElement.innerHTML = `QUESTION ${counter + 1}<span>/10</span>`;
 }
 
-function countdown() {}
 
 randomizeQuestions(3);
 changeQuestions();
