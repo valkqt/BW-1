@@ -44,9 +44,29 @@ h2 {
 }
 
 .divRecensione{
+    text-align: left;
     margin-top: 0%;
     margin-bottom: 1%;
+    
 }
 #recensioneUtente{
-padding-top: 1%;
+    justify-content: center;
+    width: 50%;
+    display: flex;
+    padding-top: 1%;   
+    margin: auto; 
+   
+}
+
+.immagineProfilo {
+    display: block;
+    width: 8%;
+    border-radius: 100%;
+    margin-right: 3%;   
+}
+
+#recensioneUtente p {
+    text-align: left;
+   
+    font-size: 20px;
 }
