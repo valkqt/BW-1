@@ -20,7 +20,12 @@ function postResults() {
   wrongResult[1].innerText = `${((wrongArray.length / answers.length) * 100).toFixed(1)}%`;
   wrongResult[2].innerText = `${wrongArray.length} / ${answers.length} questions`
 
+
+
+
   const percentuale = ((correctArray.length / answers.length) * 100).toFixed(1)
+  passOrFail(percentuale)
+
 
   const riempimento = document.querySelector('.barrapiena');
   const percentualeElemento = document.querySelector('.correctpercent');
@@ -34,9 +39,18 @@ function postResults() {
   if (percentuale === 100) {
   riempimento.style.strokeDashoffset = 0;
   }
+}
 
-
-
+function passOrFail(percentage) {
+  const resultHeader = document.querySelector('foreignObject h3')
+  const resultPass = document.querySelector('foreignObject span')
+  if (percentage >= 60) {
+    resultHeader.innerText = 'Congratulations!'
+    resultPass.innerText = 'You passed the exam.'
+  } else {
+    resultHeader.innerText = 'Too bad!'
+    resultPass.innerText = "You didn't pass the exam."
+  }
 }
 
 function riempiBarra(percentuale) {
