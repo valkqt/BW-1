@@ -44,12 +44,16 @@ function postResults() {
 function passOrFail(percentage) {
   const resultHeader = document.querySelector('foreignObject h3')
   const resultPass = document.querySelector('foreignObject span')
+  const resultMail = document.querySelector('foreignObject p')
   if (percentage >= 60) {
     resultHeader.innerText = 'Congratulations!'
     resultPass.innerText = 'You passed the exam.'
+    resultMail.innerHTML = "We'll send you the certificate <br> in few minutes.<br> Check your email (including <br>promotions / spam folder)"
   } else {
     resultHeader.innerText = 'Too bad!'
     resultPass.innerText = "You didn't pass the exam."
+    resultPass.style.color = "#C2128D"
+    resultMail.innerText = "Tranquillo è tutto in discesa"
   }
 }
 
