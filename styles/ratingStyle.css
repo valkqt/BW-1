@@ -1,38 +1,52 @@
 h2 {
     font-size:60px;
     margin-bottom: 1%;
+    margin-top: 10%;
     
 }
 
-div:first-child {
-    margin-top: 10%;    
-}
+
 
 .stelle{
-   
     margin-bottom: 1%;
 }
 
 .formContenitore {
     margin-top: 5%;
-    padding-right: 20%;
 }
+
 .rating {
     margin-top: 2%;
 }
 
 .commentRate {
+    /*margin-left: 25%;
+    margin-right: 25%;*/
+    margin: auto;
+    height: 40px;
     color: grey;
     background-color: transparent;
-    border: none;
-    margin-bottom: 5%;   
+    width: 50%;
+    border: none; 
+    border-bottom: 2px solid #d20094;
+    margin-bottom: 5%; 
+    padding-left: 1%;
+    box-sizing: border-box;
 }
 
 .dimensionP{
     margin-top: 5%;
 }
 
-
 .bottoneIlluminato {
-    margin-left: 2.5%;
+ margin-right:10% ;
+ margin-bottom: 0%;
+}
+
+.divRecensione{
+    margin-top: 0%;
+    margin-bottom: 1%;
+}
+#recensioneUtente{
+padding-top: 1%;
 }
