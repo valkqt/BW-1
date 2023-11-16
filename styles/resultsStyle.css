@@ -22,23 +22,26 @@
   }
   .circlesfondo {
     stroke: #C2128D; 
-    stroke-width: 25;
+    stroke-width: 55;
     fill: transparent;
   }
-  .centrocerchio{
-    padding-top: 75px;
-  }
+
   .centrocerchio h3{
+    line-height: 3rem;
     font-weight: bold;
+    margin-bottom: -13px;
+    margin-top: 70px;
   }
   .centrocerchio span{
+    margin-top: 0px;
     color: #00FFFF;
-    font: bold;
-    padding-top: 25px;
+    font-weight: bold;
+    font-size: large;
+    
   }
   .centrocerchio p{
     font-size: x-small;
-    padding-top: 70px;
+    padding-top: 15px;
   }
   .percentuale {
     position: absolute;
@@ -100,7 +103,7 @@ form{
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: transparent;
-    border: 2px solid #ccc;
+    border: 3px solid #ccc;
     width: 150px; 
     height: 50px; 
     outline: none; 
