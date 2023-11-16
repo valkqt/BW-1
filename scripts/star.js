@@ -38,8 +38,10 @@ function generaCommento() {
   spazioStelle.appendChild(stella)
   stella.style.transform = "scale(0.5)"
 }
+ 
  prendiRecensione.appendChild(spazioRecensione)
  spazioRecensione.innerText = prendiCommento
+ richiamoCommento.disabled = true;
 }
 
 
