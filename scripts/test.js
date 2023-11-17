@@ -72,7 +72,8 @@ function randomizeQuestions(n) {
   }
 }
 
-function timerPepe() {
+
+function timeCounter() {
   const countdownText = document.querySelector(".testo-cerchio .countdown");
   const label = document.querySelector(".testo-cerchio .label");
 
@@ -80,6 +81,9 @@ function timerPepe() {
     let secondsRemaining = durationSeconds;
 
     const updateTimer = () => {
+
+      // condition for time out and timer reset
+
       if (secondsRemaining === 0) {
         let currentQuestion = document.querySelector("main h1");
         counter++;
@@ -96,15 +100,14 @@ function timerPepe() {
         }
         secondsRemaining = durationSeconds;
         countdownText.textContent = secondsRemaining;
-        // riempiBarra(100);
-
-
       }
+
+      // countdown
+
       if (secondsRemaining >= 0) {
         countdownText.textContent = secondsRemaining;
 
         label.textContent = "secondi";
-
 
         secondsRemaining--;
       }
@@ -112,17 +115,54 @@ function timerPepe() {
     updateTimer();
     timer = setInterval(updateTimer, 1000);
   };
-  startTimer(3);
-
-  // riempiBarra(100);
-
+  startTimer(30);
 }
 
-function changeQuestions() {
+// series of sub-functions for the test, to improve readability
+
+function findQuestion(title) {
+  for (let question of questions) {
+    if (title === question.title) {
+      return question;
+    }
+  }
+}
+
+function replaceButton(element) {
+  const newBtn = element.cloneNode(true);
+  element.replaceWith(newBtn);
+}
+
+function replaceTimer() {
+  const oldTimer = document.querySelector(".riempimento");
+  const newTimer = oldTimer.cloneNode(true);
+  oldTimer.replaceWith(newTimer);
+}
+
+function countQuestions(n) {
+  const counterElement = document.querySelector("main p:last-child");
+  counterElement.innerHTML = `QUESTION ${counter + 1}<span>/${n}</span>`;
+  if (counter < n) {
+    counter++;
+  }
+}
+
+function initializeTimer() {
+  replaceTimer();
+  clearInterval(timer);
+  timeCounter();
+}
+
+function changeQuestions() {  
+
+  // termination condition
+
   if (chosenQuestions.length === 0) {
     window.location.assign("/results.html");
     return;
   }
+
+  // change text to reflect current question
 
   let currentQuestion = document.querySelector("main h1");
   let buttons = document.querySelectorAll("button");
@@ -137,62 +177,44 @@ function changeQuestions() {
     button.innerText = picked[`answer${i + 1}`].text;
     let text = button.innerText;
 
+    // add validation functionality to buttons
+
     button.addEventListener("click", (e) => {
-      for (let question of questions) {
-        if (currentQuestion.innerHTML === question.title) {
-          for (let answer in question) {
-            if (text === question[answer].text) {
-              if (question[answer].correct) {
-                window.sessionStorage.setItem(question.db_name, "correct");
-                counter++;
-                countQuestions();
+      let question = findQuestion(currentQuestion.innerHTML);
 
-                const newBtn = e.target.cloneNode(true);
-                e.target.replaceWith(newBtn);
-                changeQuestions();
-              } else {
-                window.sessionStorage.setItem(question.db_name, "wrong");
-                counter++;
+      // query to check which answer was chosen and if it is the correct one
+      for (let answer in question) {
+        if (text === question[answer].text) {
+          if (question[answer].correct) {
+            window.sessionStorage.setItem(question.db_name, "correct");
+            countQuestions();
+            replaceButton(e.target);
 
-                countQuestions();
+            changeQuestions();
+          } else {
+            window.sessionStorage.setItem(question.db_name, "wrong");
+            countQuestions();
+            replaceButton(e.target);
 
-                const newBtn = e.target.cloneNode(true);
-                e.target.replaceWith(newBtn);
-                changeQuestions();
-              }
-            }
+            changeQuestions();
           }
         }
       }
-      const riempimento = document.querySelector(".riempimento");
-      const pepe = riempimento.cloneNode(true)
-      riempimento.replaceWith(pepe)
 
-      clearInterval(timer);
-      timerPepe();
+      // reset timer
+
+      initializeTimer();
     });
   }
 }
 
-function countQuestions() {
-  const counterElement = document.querySelector("main p:last-child");
-  counterElement.innerHTML = `QUESTION ${counter + 1}<span>/10</span>`;
-}
-
-// function riempiBarra(percentuale) {
-
-//   const riempimento = document.querySelector(".riempimento");
-
-//   const circonferenza = riempimento.getTotalLength();
-//   const lunghezzaRiempimento = circonferenza * (1 - percentuale / 100);
-
-//   riempimento.style.strokeDashoffset = lunghezzaRiempimento;
-// }
-
-
+// function calls on page load
 
 randomizeQuestions(3);
 changeQuestions();
-timerPepe();
+timeCounter();
 
+// sessionStorage in this project is used in place of back-end
 sessionStorage.clear();
+
+// import {questions} from './db.js'
