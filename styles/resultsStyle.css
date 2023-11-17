@@ -80,10 +80,6 @@ p.dimensionP{
   line-height: 0.8rem;
   text-align: left;
 }
-.correct p:first{
-  margin: 0px;
-
-}
 .correct p:last-child{
   font-size: 15px;
   margin-top: 25px;
@@ -128,7 +124,7 @@ form{
     height: 50px; 
     outline: none; 
     margin-bottom: -5px; 
-    font: bold;
+    font-weight: bold;
     color: whitesmoke;
     font-size: 15px;
 }
