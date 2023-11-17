@@ -251,7 +251,7 @@ const questions = [
           answer4: {text: "Data oriented model", correct: false,},
       },
       {
-          db_name: "question23", title: "Come posso nascondere il testo quanto uso un tag <input>;?",
+          db_name: "question23", title: `Come posso nascondere il testo quanto uso un tag input;?`,
           answer1: {text: "usando type='password'", correct: false,},
           answer2: {text: "usando type='hidden'", correct: true,},
           answer3: {text: "usando hidden attribute",correct: false,},

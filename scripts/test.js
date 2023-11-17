@@ -56,7 +56,7 @@ function timeCounter() {
     updateTimer();
     timer = setInterval(updateTimer, 1000);
   };
-  startTimer(5);
+  startTimer(30);
 }
 
 // series of sub-functions for the test, to improve readability
