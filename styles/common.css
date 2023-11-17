@@ -26,10 +26,6 @@ body span{
     font-weight: normal;
 }
 
-body p, li, a{
-    /*font-family: Inter;*/
-}
-
 main{
     text-align: center;
 }
