@@ -30,7 +30,6 @@ function timeCounter() {
         let currentQuestion = document.querySelector("main h1");
 
         countQuestions(numberOfQuestions);
-        console.log('pepe')
 
         for (let question of questions) {
           if (currentQuestion.innerHTML === question.title) {
