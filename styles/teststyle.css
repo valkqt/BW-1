@@ -47,10 +47,11 @@
 .riempimento {
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    animation-duration: 3s;
+    animation-duration: 30.45s;
     animation-name: pepe;
     animation-iteration-count: infinite;
-    animation-direction: reverse
+    animation-direction: reverse;
+    animation-timing-function: linear
 
 
 }
