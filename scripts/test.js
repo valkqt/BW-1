@@ -171,6 +171,63 @@ const questions = [
     answer3: { text: "Buzzanca Andrea", correct: false },
     answer4: { text: "ANDREA BUZZANCA", correct: false },
   },
+  {
+    db_name: "question13",
+    title:
+      "Qual è la sintassi corretta dei commenti javascript?",
+    answer1: { text: ">>Comment<<", correct: false },
+    answer2: { text: "<<Comment>>", correct: false },
+    answer3: { text: "//Comment", correct: true },
+    answer4: { text: "/Comment",correct: false},
+  },
+  {
+    db_name: "question14",
+    title: "Come si scrive uno statement IF che controlli se i é uguale a 5 in Javascript?",
+    answer1: { text: "if(i=5){}", correct: false },
+    answer2: { text: "if i==5 then", correct: false },
+    answer3: { text: "if(i===5){}", correct: true },
+    answer4: { text: "if i=5 then", correct: false },
+  },
+  {
+    db_name: "question15",
+    title: "Quale di questi NON é un oggetto Javascript?",
+    answer1: { text: "const obj = {};", correct: false },
+    answer2: { text: `const obj = {name:"John"};`, correct: false },
+    answer3: { text: `const obj = {name ="John"};`, correct: true },
+    answer4: { text: "const obj = new Object();", correct: false },
+  },
+  {
+    db_name: "question16",
+    title: 'Come si chiama una funzione chiamata "foo"?',
+    answer1: { text: "function foo()", correct: false, },
+    answer2: { text: "foo()", correct: true, },
+    answer3: { text: "foo", correct: false, },
+    answer4: { text: "call function foo()", correct: false, },
+  },
+  {
+    db_name: "question17",
+    title: "Una variabile in Javascript puó venire dichiarata con quale delle seguenti parole chiave?",
+    answer1: {text: "new", correct: false, },
+    answer2: {text: "int", correct: false, },
+    answer3: {text: "string", correct: false, },
+    answer4: {text: "const", correct: true,},
+  },
+  {
+    db_name: "question18",
+    title: "Quali dei seguenti é stato il primo videogioco creato?",
+    answer1: {text: "hamurabi", correct: false, },
+    answer2: {text: "tetris", correct: false, },
+    answer3: {text: "oxo", correct: true, },
+    answer4: {text: "tennis for two", correct: false,},
+  },
+  { 
+    db_name: "question19",
+    title: "Nel film WarGames, quale era la password usata per accedere al WOPR(War Operation Pla Response?",
+    answer1: {text: "samaritan", correct: false, },
+    answer2: {text: "parc", correct: false, },
+    answer3: {text: "joshua", correct: false, },
+    answer4: {text: "sher", correct: true,},
+  }
 ];
 
 const chosenQuestions = [];
