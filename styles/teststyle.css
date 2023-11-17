@@ -26,14 +26,6 @@
 .cerchio {
     transform: rotate(-90deg);
 }
-/* .pepe {
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-
-    transition: stroke-dashoffset 3s linear;
-
-
-} */
  
 @keyframes pepe {
     from {
