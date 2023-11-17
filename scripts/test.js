@@ -2,7 +2,7 @@ const questions = [
   {
     db_name: "question1",
     title:
-      "Qual è il metodo corretto  per stampare il name di ogni oggetti nel seguente array?",
+      "Qual è il metodo corretto  per stampare il name di ogni oggetto nel seguente array?",
     answer1: { text: "console.log(users.name)", correct: false },
     answer2: { text: "console.log(users[length].name)", correct: false },
     answer3: { text: "console.log(users[name])", correct: false },
@@ -54,6 +54,122 @@ const questions = [
       text: "querySelector può essere utilizzato senza un parametro, mentre querySelectorAll ne ha sempre bisogno",
       correct: false,
     },
+  },
+  {
+    db_name: "question6",
+    title: "Il metodo getElementById darà:",
+    answer1: {
+      text: "Sempre un array di elementi, anche quando nessun elemento viene trovato",
+      correct: false,
+    },
+    answer2: {
+      text: "Al massimo un elemento, null se non viene trovato alcun elemento",
+      correct: true,
+    },
+    answer3: {
+      text: " Sempre un elemento, avvolto in un array",
+      correct: false,
+    },
+    answer4: {
+      text: " Elementi HTMLCollection,",
+      correct: false,
+    },
+  },
+  {
+    db_name: "question7",
+    title: "A cosa serve il primo parametro di element.addEventListener?",
+    answer1: {
+      text: "Callback",
+      correct: false,
+    },
+    answer2: {
+      text: "Event Type",
+      correct: true,
+    },
+    answer3: {
+      text: "Caller",
+      correct: false,
+    },
+    answer4: {
+      text: "Nessuna delle precedenti",
+      correct: false,
+    },
+  },
+  {
+    db_name: "question8",
+    title: "Qual è il risultato di document.querySelector(`#test`) quando non ci sono elementi cn id test nel DOM?",
+    answer1: {
+      text: "error",
+      correct: false,
+    },
+    answer2: {
+      text: "undefined",
+      correct: false,
+    },
+    answer3: {
+      text: "null",
+      correct: true,
+    },
+    answer4: {
+      text: "[]",
+      correct: false,
+    },
+  },
+  {
+    db_name: "question9",
+    title: "L'argomento in querySelector...",
+    answer1: {
+      text: "Può essere omesso",
+      correct: false,
+    },
+    answer2: {
+      text: "Dovrebbe essere sempre un selettore CSS valido",
+      correct: true,
+    },
+    answer3: {
+      text: "Può essere un oggetto con più proprietà",
+      correct: false,
+    },
+    answer4: {
+      text: "Deve essere un id, una classe o un nome di tag",
+      correct: false,
+    },
+  },
+  {
+    db_name: "question10",
+    title: "Quale tra le seguenti è la sintassi corretta può riferirsi a uno script esterno chiamato `formValidation.js`?",
+    answer1: {
+      text: "<script source = “formValidation.js”>",
+      correct: false,
+    },
+    answer2: {
+      text: "<script href = “formValidation.js”>",
+      correct: false,
+    },
+    answer3: {
+      text: "<script name = “formValidation.js”>",
+      correct: false,
+    },
+    answer4: {
+      text: "<script src = “formValidation.js”>",
+      correct: true,
+    },
+  },
+  {
+    db_name: "question11",
+    title: "Qual è il miglior modo di affrontare una discesa?",
+    answer1: { text: "Frenando", correct: false },
+    answer2: { text: "Gettandosi dal veicolo in corsa", correct: false },
+    answer3: { text: "Ripetendo JavaScript", correct: true },
+    answer4: { text: "Pregando", correct: false },
+  },
+  {
+    db_name: "question12",
+    title: "Qual è il risultato di document.querySelector(`#migliorCoordinatore`)?",
+    answer1: { text: "andreaBuzzanca", correct: true },
+    answer2: { text: "Andrea Buzzanca", correct: false },
+    answer3: { text: "Buzzanca Andrea", correct: false },
+    answer4: { text: "ANDREA BUZZANCA", correct: false },
   },
 ];
 
@@ -112,7 +228,7 @@ function timerPepe() {
     updateTimer();
     timer = setInterval(updateTimer, 1000);
   };
-  startTimer(3);
+  startTimer(30);
 
   // riempiBarra(100);
 
@@ -191,7 +307,7 @@ function countQuestions() {
 
 
 
-randomizeQuestions(3);
+randomizeQuestions(10);
 changeQuestions();
 timerPepe();
 
