@@ -227,7 +227,65 @@ const questions = [
     answer2: {text: "parc", correct: false, },
     answer3: {text: "joshua", correct: false, },
     answer4: {text: "sher", correct: true,},
-  }
+  },
+  {
+    db_name: "question20",
+    title: "Cosa significa “responsive” nello Sviluppo Web?",
+    answer1: {text: "La pagina web reagisce immediatamente all'input dell'utente",correct: false,},
+    answer2: {text: "La pagina web non ha tempi di attesa brevi",correct: false,},
+    answer3: {text: "La pagina Web può essere ridimensionata in base alle dimensioni del display",correct: true,},
+    answer4: {text: "Nessuna delle precedenti",correct: false,},
+  },
+    {
+      db_name: "question21",title: "Quale proprietà CSS viene utilizzata per stabilire il corolore del testo",
+        answer1: {text: "text-color", correct: false,},
+        answer2: {text: "text: color()",correct: false,},
+        answer3: {text: "color", correct: true,},
+        answer4: {text: "font-color",correct: false,},
+    },
+    {
+        db_name: "question22", title: "DOM sta per",
+        answer1: {text: "Document Oriented model", correct: false,},
+        answer2: {text: "Data object model", correct: true,},
+        answer3: {text: "Data object model", correct: false,},
+        answer4: {text: "Data oriented model", correct: false,},
+    },
+    {
+        db_name: "question23", title: "Come posso nascondere il testo quanto uso un tag <input>;?",
+        answer1: {text: "usando type='password'", correct: false,},
+        answer2: {text: "usando type='hidden'", correct: true,},
+        answer3: {text: "usando hidden attribute",correct: false,},
+        answer4: {text: "usando hidden='true'", correct: false,},
+    },
+    {
+        db_name: "question24", title: "Con quale simbolo viene identificata una pseudo-classe;?",
+        answer1: {text: ". (punto)", correct: false,},
+        answer2: {text: ": (due punti)", correct: true,},
+        answer3: {text: "# (cancelletto)",correct: false,},
+        answer4: {text: "; (punto e virgola)", correct: false,}
+    },
+    {
+        db_name: "question25", title: "Se rendo infiline un Paragraph dove sarà visualizzato il Paragraph successivo?",
+        answer1: {text: "Sotto al primo Paragraph",correct: true,},
+        answer2: {text: "Alla sinistra del primo Paragraph", correct: false,},
+        answer3: {text: "Alla destra del primo Paragraph", correct: false,},
+        answer4: {text: "La luna nera", correct: false,},
+    },
+    {
+        db_name: "question26", title: "Se ho 12 pesci in una vasca e 5 di loro annegano, quanti ne restano vivi?",
+        answer1: {text: "12", correct: true,},
+        answer2: {text: "nessuno", correct: false,},
+        answer3: {text: "7", correct: false,},
+        answer4: {text: "9", correct: false,},
+    },
+    {
+        db_name: "question27",title: "Qual è il giorno più lungo della settimana?",
+        answer1: {text: "mercoledì", correct: true,},
+        answer2: {text: "Lunedì", correct: false,},
+        answer3: {text: "Martedì", correct: false,},
+        answer4: {text:"Domenica", correct: false,},
+    },
+
 ];
 
 const chosenQuestions = [];
