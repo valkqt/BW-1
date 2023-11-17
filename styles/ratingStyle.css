@@ -49,7 +49,7 @@ h2 {
     width: 50%;
     display: flex;
     padding-top: 1%;   
-    margin: auto; 
+    margin: auto auto 5em auto;
    
 }
 
@@ -57,10 +57,16 @@ h2 {
     display: block;
     width: 8%;
     border-radius: 100%;
-    margin-right: 3%;   
+    margin-right: 3%;
+    margin: auto;
 }
 
 #recensioneUtente p {
     text-align: left;
     font-size: 20px;
+    word-wrap: break-word;
+}
+
+#recensioneUtente div {
+    width: 80%;
 }
