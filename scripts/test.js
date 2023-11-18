@@ -1,7 +1,7 @@
 const chosenQuestions = [];
 let counter = 1;
 let timer;
-let numberOfQuestions = 3
+let numberOfQuestions = 10
 
 // n can be any number of questions, so long as it doesn't exceed the number of questions in the database
 
