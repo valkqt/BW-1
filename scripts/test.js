@@ -1,7 +1,9 @@
 const chosenQuestions = [];
 let counter = 1;
 let timer;
-let numberOfQuestions = 10
+let numberOfQuestions = 3
+
+// n can be any number of questions, so long as it doesn't exceed the number of questions in the database
 
 function randomizeQuestions(n) {
   for (let i = 0; i < n; i++) {
@@ -95,7 +97,47 @@ function initializeTimer() {
   timeCounter();
 }
 
-function changeQuestions() {  
+function randomizePosition(object) {
+
+  const answers = []
+
+  for (let key in object) {
+    if (key.startsWith('answer')) {
+      answers.push(object[key].text)
+    }
+  }
+
+  const randomized = []
+  const numberOfAnswers = answers.length
+
+  while (randomized.length < numberOfAnswers) {
+
+    let randomIndex = Math.floor(Math.random()*answers.length)
+    randomized.push(answers[randomIndex])
+    answers.splice(randomIndex,1)
+
+  }
+  return randomized
+}
+
+function clearButtons(container) {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild)
+  }
+}
+
+function generateButtons(container, object) {
+  for (let key in object) {
+    if (key.startsWith('answer')){
+      const elem = document.createElement('button')
+      container.appendChild(elem)
+    }
+  }
+
+
+}
+
+function changeQuestions(container) {  
 
   // termination condition
 
@@ -104,19 +146,29 @@ function changeQuestions() {
     return;
   }
 
+  const answerContainer = document.querySelector('.risposte')
+  clearButtons(answerContainer)
+
+  let picked = chosenQuestions[0];
+
+  generateButtons(answerContainer, picked)
+
   // change text to reflect current question
 
   let currentQuestion = document.querySelector("main h1");
-  let buttons = document.querySelectorAll("button");
+  let buttons = document.querySelectorAll(".risposte button");
 
-  let picked = chosenQuestions[0];
-  currentQuestion.innerHTML = picked.title;
+  const randomized = randomizePosition(picked)
+
+
+  currentQuestion.innerHTML = picked.title
+
 
   chosenQuestions.splice(0, 1);
 
-  for (let i = 0; i <= 3; i++) {
+  for (let i = 0; i <= buttons.length-1; i++) {
     let button = buttons[i];
-    button.innerText = picked[`answer${i + 1}`].text;
+    button.innerText = randomized[i];
     let text = button.innerText;
 
     // add validation functionality to buttons
@@ -131,12 +183,15 @@ function changeQuestions() {
             window.sessionStorage.setItem(question.db_name, "correct");
             countQuestions(numberOfQuestions);
             replaceButton(e.target);
+            console.log('pepe')
 
             changeQuestions();
           } else {
             window.sessionStorage.setItem(question.db_name, "wrong");
             countQuestions(numberOfQuestions);
             replaceButton(e.target);
+            console.log('plofi')
+
 
             changeQuestions();
           }
